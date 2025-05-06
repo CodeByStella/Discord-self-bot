@@ -2,21 +2,28 @@
   "name": "discord-selfbot",
   "version": "1.0.0",
   "description": "Discord self-bot for auto posting and monitoring",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
     "discord.js-selfbot-v13": "^2.14.0",
-    "node-notifier": "^10.0.1",
-    "openai": "^4.0.0",
-    "node-telegram-bot-api": "^0.61.0",
     "dotenv": "^16.0.3",
-    "winston": "^3.8.2",
-    "chalk": "^4.1.2"
+    "node-notifier": "^10.0.1",
+    "node-telegram-bot-api": "^0.61.0",
+    "openai": "^4.0.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "@types/node": "^22.15.12",
+    "@types/node-notifier": "^8.0.5",
+    "@types/node-telegram-bot-api": "^0.64.8",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
-} 
+}
