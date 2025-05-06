@@ -1,0 +1,22 @@
+{
+  "name": "discord-selfbot",
+  "version": "1.0.0",
+  "description": "Discord self-bot for auto posting and monitoring",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.14.0",
+    "node-notifier": "^10.0.1",
+    "openai": "^4.0.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "dotenv": "^16.0.3",
+    "winston": "^3.8.2",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 
