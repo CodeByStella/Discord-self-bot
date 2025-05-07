@@ -115,7 +115,7 @@ class DiscordSelfBot {
             updateStatus(`Posted to forum channel: ${channel.name}`, 'success');
             await notificationService.sendNotification(
                 'New Forum Post',
-                `Posted to ${channel.name}\nTitle: ${title}\nContent: ${content}\nLink: ${thread.url}`
+                `Posted to ${channel.name}\nTitle: ${title}\nContent: ${content}\nLink: https://discord.com/channels/${channel.guild.id}/${thread.id}`
             );
         } catch (error) {
             logger.error(`Error posting to forum channel ${channel.name}: ${error instanceof Error ? error.message : 'Unknown error'}`);
